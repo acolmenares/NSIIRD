@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Consulta" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" />
+      <xs:element name="ConsultarVictima">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="parametrosEntrada" nillable="true" type="q1:ParametrosEntradaVictimaPorDocumento" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultarVictimaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="ConsultarVictimaResult" nillable="true" type="q2:ParametrosSalidaVictima" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaGrupoFamiliarIdentificador">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="parametrosEntrada" nillable="true" type="q3:ParametrosEntradaGrupoFamiliarIdentificador" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaGrupoFamiliarIdentificadorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="ConsultaGrupoFamiliarIdentificadorResult" nillable="true" type="q4:ParametrosSalidaVictima" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaGrupoFamiliarRadicado">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="parametrosEntrada" nillable="true" type="q5:ParametrosEntradaGrupoFamiliarNRadicado" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaGrupoFamiliarRadicadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="ConsultaGrupoFamiliarRadicadoResult" nillable="true" type="q6:ParametrosSalidaVictima" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" />
+      <xs:complexType name="ParametrosEntradaVictimaPorDocumento">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ParametrosEntradaVictimaPorDocumento" nillable="true" type="tns:ParametrosEntradaVictimaPorDocumento" />
+      <xs:complexType name="ParametrosSalidaVictima">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ParametrosSalida">
+            <xs:sequence>
+              <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="Victima418" nillable="true" type="q1:ArrayOfResultadoConsulta" />
+              <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="VictimaRUV" nillable="true" type="q2:ArrayOfResultadoConsulta" />
+              <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="VictimaSIPOD" nillable="true" type="q3:ArrayOfResultadoConsulta" />
+              <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="VictimaSIRAV" nillable="true" type="q4:ArrayOfResultadoConsulta" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ParametrosSalidaVictima" nillable="true" type="tns:ParametrosSalidaVictima" />
+      <xs:complexType name="ParametrosSalida">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TieneError" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ParametrosSalida" nillable="true" type="tns:ParametrosSalida" />
+      <xs:complexType name="ParametrosEntradaGrupoFamiliarIdentificador">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ParametrosEntradaGrupoFamiliarIdentificador" nillable="true" type="tns:ParametrosEntradaGrupoFamiliarIdentificador" />
+      <xs:complexType name="ParametrosEntradaGrupoFamiliarNRadicado">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fuente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeRadicado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ParametrosEntradaGrupoFamiliarNRadicado" nillable="true" type="tns:ParametrosEntradaGrupoFamiliarNRadicado" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfResultadoConsulta">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultadoConsulta" nillable="true" type="tns:ResultadoConsulta" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfResultadoConsulta" nillable="true" type="tns:ArrayOfResultadoConsulta" />
+      <xs:complexType name="ResultadoConsulta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="departamentoDeclaracion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="departamentoSiniestro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="estadoValoracion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fechaDeclaracion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="fechaSiniestro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="fechaValoracion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="hechoVictimizante" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idAnexo" type="xs:int" />
+          <xs:element minOccurs="0" name="idDeclaracion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idJefeHogar" type="xs:int" />
+          <xs:element minOccurs="0" name="idRegistroPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="idSiniestro" type="xs:int" />
+          <xs:element minOccurs="0" name="municipioDeclaracion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="municipioSiniestro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numeroFUD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paramHecho" type="xs:int" />
+          <xs:element minOccurs="0" name="primerApellido" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="primerNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="relacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responsable" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="segundoApellido" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="segundoNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDesplazamiento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoVictima" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ResultadoConsulta" nillable="true" type="tns:ResultadoConsulta" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IConsulta_ConsultarVictima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarVictima" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultarVictima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarVictimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarIdentificador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarIdentificador" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarIdentificador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarIdentificadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarRadicado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarRadicado" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarRadicado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarRadicadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConsulta">
+    <wsdl:operation name="ConsultarVictima">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsulta/ConsultarVictima" message="tns:IConsulta_ConsultarVictima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsulta/ConsultarVictimaResponse" message="tns:IConsulta_ConsultarVictima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarIdentificador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarIdentificador" message="tns:IConsulta_ConsultaGrupoFamiliarIdentificador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarIdentificadorResponse" message="tns:IConsulta_ConsultaGrupoFamiliarIdentificador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarRadicado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarRadicado" message="tns:IConsulta_ConsultaGrupoFamiliarRadicado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarRadicadoResponse" message="tns:IConsulta_ConsultaGrupoFamiliarRadicado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConsulta" type="tns:IConsulta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarVictima">
+      <soap:operation soapAction="http://tempuri.org/IConsulta/ConsultarVictima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarIdentificador">
+      <soap:operation soapAction="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarIdentificador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarRadicado">
+      <soap:operation soapAction="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarRadicado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Consulta">
+    <wsdl:port name="BasicHttpBinding_IConsulta" binding="tns:BasicHttpBinding_IConsulta">
+      <soap:address location="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

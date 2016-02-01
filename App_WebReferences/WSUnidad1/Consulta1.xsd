@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" />
+  <xs:complexType name="ParametrosEntradaVictimaPorDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaVictimaPorDocumento" nillable="true" type="tns:ParametrosEntradaVictimaPorDocumento" />
+  <xs:complexType name="ParametrosSalidaVictima">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ParametrosSalida">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="Victima418" nillable="true" type="q1:ArrayOfResultadoConsulta" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="VictimaRUV" nillable="true" type="q2:ArrayOfResultadoConsulta" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="VictimaSIPOD" nillable="true" type="q3:ArrayOfResultadoConsulta" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" minOccurs="0" name="VictimaSIRAV" nillable="true" type="q4:ArrayOfResultadoConsulta" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParametrosSalidaVictima" nillable="true" type="tns:ParametrosSalidaVictima" />
+  <xs:complexType name="ParametrosSalida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosSalida" nillable="true" type="tns:ParametrosSalida" />
+  <xs:complexType name="ParametrosEntradaGrupoFamiliarIdentificador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaGrupoFamiliarIdentificador" nillable="true" type="tns:ParametrosEntradaGrupoFamiliarIdentificador" />
+  <xs:complexType name="ParametrosEntradaGrupoFamiliarNRadicado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fuente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDeRadicado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaGrupoFamiliarNRadicado" nillable="true" type="tns:ParametrosEntradaGrupoFamiliarNRadicado" />
+</xs:schema>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Consulta" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" />
+      <xsd:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.Objetos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConsulta_ConsultarVictima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarVictima" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultarVictima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarVictimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarIdentificador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarIdentificador" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarIdentificador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarIdentificadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarRadicado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarRadicado" />
+  </wsdl:message>
+  <wsdl:message name="IConsulta_ConsultaGrupoFamiliarRadicado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaGrupoFamiliarRadicadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConsulta">
+    <wsdl:operation name="ConsultarVictima">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsulta/ConsultarVictima" message="tns:IConsulta_ConsultarVictima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsulta/ConsultarVictimaResponse" message="tns:IConsulta_ConsultarVictima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarIdentificador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarIdentificador" message="tns:IConsulta_ConsultaGrupoFamiliarIdentificador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarIdentificadorResponse" message="tns:IConsulta_ConsultaGrupoFamiliarIdentificador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarRadicado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarRadicado" message="tns:IConsulta_ConsultaGrupoFamiliarRadicado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarRadicadoResponse" message="tns:IConsulta_ConsultaGrupoFamiliarRadicado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConsulta" type="tns:IConsulta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarVictima">
+      <soap:operation soapAction="http://tempuri.org/IConsulta/ConsultarVictima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarIdentificador">
+      <soap:operation soapAction="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarIdentificador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGrupoFamiliarRadicado">
+      <soap:operation soapAction="http://tempuri.org/IConsulta/ConsultaGrupoFamiliarRadicado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Consulta">
+    <wsdl:port name="BasicHttpBinding_IConsulta" binding="tns:BasicHttpBinding_IConsulta">
+      <soap:address location="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
