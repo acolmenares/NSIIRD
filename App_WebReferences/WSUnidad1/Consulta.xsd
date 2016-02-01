@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vivanto.unidadvictimas.gov.co:8081/Consulta.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" />
+  <xs:element name="ConsultarVictima">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="parametrosEntrada" nillable="true" type="q1:ParametrosEntradaVictimaPorDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarVictimaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="ConsultarVictimaResult" nillable="true" type="q2:ParametrosSalidaVictima" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaGrupoFamiliarIdentificador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="parametrosEntrada" nillable="true" type="q3:ParametrosEntradaGrupoFamiliarIdentificador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaGrupoFamiliarIdentificadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="ConsultaGrupoFamiliarIdentificadorResult" nillable="true" type="q4:ParametrosSalidaVictima" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaGrupoFamiliarRadicado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="parametrosEntrada" nillable="true" type="q5:ParametrosEntradaGrupoFamiliarNRadicado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaGrupoFamiliarRadicadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfConsultaEntidadesExternas.Common.DTO" minOccurs="0" name="ConsultaGrupoFamiliarRadicadoResult" nillable="true" type="q6:ParametrosSalidaVictima" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
