@@ -71,7 +71,7 @@
                 <td colspan="2">
 
 				    <telerik:RadGrid ID="Rg_Programas" runat="server" AllowSorting="True" GridLines="None" Skin="WebBlue" Width="100%"  
-                        AutoGenerateColumns="False" ShowStatusBar="True" TabIndex="6" PageSize="20" CellSpacing="0">
+                        AutoGenerateColumns="False" ShowStatusBar="True" TabIndex="6" PageSize="30" CellSpacing="0">
                         <MasterTableView  NoDetailRecordsText="No hay informaci&#243;n." NoMasterRecordsText="No hay informaci&#243;n." DataKeyNames="Id" CommandItemDisplay ="Top" AllowPaging="True">
                             <Columns>
                                <telerik:GridTemplateColumn HeaderText="No." DefaultInsertValue="" UniqueName="TemplateColumn">
@@ -172,7 +172,7 @@
                     <telerik:RadMultiPage ID="RadMultiPage1" runat="server" 
                         Width="100%" SelectedIndex="0">
                         <telerik:RadPageView ID="PageView1" runat="server" Selected="True"  >
-                            <telerik:RadGrid ID="Rg_Listado" runat="server" AllowSorting="True"  AutoGenerateColumns="False" CellSpacing="0" GridLines="None" PageSize="20" 
+                            <telerik:RadGrid ID="Rg_Listado" runat="server" AllowSorting="True"  AutoGenerateColumns="False" CellSpacing="0" GridLines="None" PageSize="30" 
                                 ShowStatusBar="True" Skin="WebBlue" TabIndex="6" Width="100%">
                                 <MasterTableView AllowPaging="True" CommandItemDisplay="Top" DataKeyNames="ID" NoDetailRecordsText="No hay información." NoMasterRecordsText="No hay información.">
                                     <DetailTables>
@@ -283,7 +283,7 @@
                         </telerik:RadPageView>
                         <telerik:RadPageView ID="PageView3" runat="server">
                             <telerik:RadGrid ID="Rg_Resumen" runat="server" AllowSorting="True" 
-                                AutoGenerateColumns="False" PageSize="20" 
+                                AutoGenerateColumns="False" PageSize="30" 
                                 ShowFooter="True" ShowStatusBar="True" Skin="WebBlue" TabIndex="6" 
                                 Width="100%" ResolvedRenderMode="Classic">
                                 <MasterTableView AllowPaging="True" CommandItemDisplay="Top" DataKeyNames="Id" 
