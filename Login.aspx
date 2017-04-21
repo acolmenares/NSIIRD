@@ -80,7 +80,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div id="footer_text">SIIRD : Manejo de Operaciones para Desplazados de Colombia</div>
+                            <div id="footer_text">Manejo de Operaciones para Desplazados de Colombia</div>
                         </div>
                     </td>
                 </tr>
